@@ -7,59 +7,77 @@
   gap: 1rem;
   padding: 2rem;
   margin: auto;
+  grid-template-areas:
+    "welcome welcome welcome about"
+    "welcome welcome welcome about"
+    "welcome welcome welcome about"
+    "contact projects interests about"
+    "contact projects interests about"
+    "contact animation animation now";
 }
 
 .panel {
   background: var(--dark-4);
   width: 100%;
   height: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   border: 1px solid var(--border);
   transition: 0.1s ease-in-out;
+  overflow: hidden;
 }
 
 .panel:hover {
   border: 1px solid #5dacd6;
 }
 
-.span2 {
-  grid-column: span 1;
+.welcome {
+  grid-area: welcome;
 }
-.span2 {
-  grid-column: span 2;
+.about {
+  grid-area: about;
 }
-.span3 {
-  grid-column: span 3;
+.contact {
+  grid-area: contact;
 }
-.span4 {
-  grid-column: span 4;
+.projects {
+  grid-area: projects;
+}
+.interests {
+  grid-area: interests;
+}
+.animation {
+  grid-area: animation;
 }
 
-.rowSpan1 {
-  grid-row: span 1;
+/* Medium screens (tablets) */
+@media (max-width: 1023px) {
+  .layout {
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: repeat(1fr, 7);
+    grid-template-areas:
+      "welcome welcome welcome"
+      "welcome welcome welcome"
+      "welcome welcome welcome"
+      "about contact projects"
+      "about contact projects"
+      "about contact interests"
+      "about animation now";
+  }
 }
-.rowSpan4 {
-  grid-row: span 4;
-}
-.rowSpan2 {
-  grid-row: span 2;
-}
-.rowSpan3 {
-  grid-row: span 3;
-}
-.rowSpan4 {
-  grid-row: span 4;
-}
-.rowSpan5 {
-  grid-row: span 5;
-}
-.rowSpan6 {
-  grid-row: span 6;
-}
-.rowSpan7 {
-  grid-row: span 7;
-}
-.rowSpan8 {
-  grid-row: span 8;
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "welcome"
+      "about"
+      "contact"
+      "projects"
+      "interests"
+      "now"
+      "animation";
+  }
 }

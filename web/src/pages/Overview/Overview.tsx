@@ -1,15 +1,18 @@
+import { Welcome } from "../../components/Overview/Welcome";
 import styles from "./Overview.module.css";
 
 export function Overview() {
   return (
     <main className={styles.layout}>
-      <div className={`${styles.panel} ${styles.span3} ${styles.rowSpan4}`}>Overview</div>
-      <div className={`${styles.panel} ${styles.span1} ${styles.rowSpan7}`}>About</div>
-      <div className={`${styles.panel} ${styles.span1} ${styles.rowSpan4}`}>Contact</div>
-      <div className={`${styles.panel} ${styles.span1} ${styles.rowSpan3}`}>Projects</div>
-      <div className={`${styles.panel} ${styles.span1} ${styles.rowSpan3}`}>Interests</div>
-      <div className={`${styles.panel} ${styles.span2} ${styles.rowSpan1}`}>Cool animation</div>
-      <div className={`${styles.panel} ${styles.span1} ${styles.rowSpan1}`}>Now</div>
+      <div className={`${styles.panel} ${styles.welcome}`}>
+        <Welcome />
+      </div>
+      <div className={`${styles.panel} ${styles.about}`}>About</div>
+      <div className={`${styles.panel} ${styles.contact}`}>Contact</div>
+      <div className={`${styles.panel} ${styles.projects}`}>Projects</div>
+      <div className={`${styles.panel} ${styles.interests}`}>Interests</div>
+      <div className={`${styles.panel} ${styles.animation}`}>Cool animation</div>
+      <div className={`${styles.panel} ${styles.now}`}>Now</div>
     </main>
   );
 }
