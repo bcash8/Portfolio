@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import { routes } from "./routes";
+import { routes } from "./Routes";
 
 export function Router() {
   return (
