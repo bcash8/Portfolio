@@ -8,6 +8,7 @@
   font-family: "Ubuntu", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  word-spacing: 0.1rem;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -20,24 +21,32 @@
 
   --dark-1: #0b0b0b;
   --dark-2: #0e0e0e;
-  --dark-3: #383838;
-  --dark-4: #141414;
-  --dark-5: #171717;
+  --dark-3: #141414;
+  --dark-4: #171717;
+  --dark-5: #383838;
+  --dark-6: #505050;
   --border: #393939;
+}
+
+h2 {
+  font-size: 1rem;
+  color: var(--dark-6);
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #5dacd6;
   text-decoration: inherit;
+  transition: 0.2s ease-in-out;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #0488cf;
 }
 
 body::before {
-  --line-color: var(--dark-3);
-  --line-size: 60px;
+  --dot-color: var(--dark-3);
+  --grid-size: 30px;
   content: "";
   position: fixed;
   top: 0;
@@ -45,14 +54,28 @@ body::before {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-image: linear-gradient(90deg, var(--line-color) 1px, transparent 1px),
-    linear-gradient(var(--line-color) 1px, transparent 1px);
-  -webkit-mask: linear-gradient(-360deg, transparent 40%, white);
-  mask: linear-gradient(-360deg, transparent 20%, white);
-  background-size: var(--line-size) var(--line-size);
+  background-image: radial-gradient(circle, var(--dot-color) 2px, transparent 2px);
+  pointer-events: none;
+  mask: linear-gradient(-360deg, transparent 10%, black);
+  background-size: var(--grid-size) var(--grid-size);
 }
 
 body,
 #root {
   min-height: 100vh;
+}
+
+.list-inside {
+  list-style-position: inside;
+  list-style-type: square;
+}
+
+ul.list-hyp {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.list-hyp li::before {
+  content: "-";
+  margin-right: 0.5em;
 }

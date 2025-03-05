@@ -13,7 +13,7 @@
     "welcome welcome welcome about"
     "contact projects interests about"
     "contact projects interests about"
-    "contact animation animation now";
+    "animation animation animation now";
 }
 
 .panel {
@@ -53,16 +53,16 @@
 /* Medium screens (tablets) */
 @media (max-width: 1023px) {
   .layout {
-    grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: repeat(1fr, 7);
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
     grid-template-areas:
       "welcome welcome welcome"
       "welcome welcome welcome"
       "welcome welcome welcome"
       "about contact projects"
       "about contact projects"
-      "about contact interests"
-      "about animation now";
+      "about now interests"
+      "about animation interests";
   }
 }
 
