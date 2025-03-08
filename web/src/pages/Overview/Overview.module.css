@@ -3,7 +3,7 @@
   max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(8, auto);
   gap: 1rem;
   padding: 2rem;
   margin: auto;
@@ -12,8 +12,7 @@
     "welcome welcome welcome about"
     "welcome welcome welcome about"
     "contact projects interests about"
-    "contact projects interests about"
-    "animation animation animation now";
+    "now projects interests about";
 }
 
 .panel {
@@ -49,6 +48,9 @@
 .animation {
   grid-area: animation;
 }
+.now {
+  grid-area: now;
+}
 
 /* Medium screens (tablets) */
 @media (max-width: 1023px) {
@@ -57,11 +59,9 @@
     grid-template-rows: auto;
     grid-template-areas:
       "welcome welcome welcome"
-      "welcome welcome welcome"
-      "welcome welcome welcome"
       "about projects projects"
       "about interests interests"
-      "contact animation now";
+      "contact now now";
   }
 }
 
@@ -76,7 +76,6 @@
       "contact"
       "projects"
       "interests"
-      "now"
-      "animation";
+      "now";
   }
 }

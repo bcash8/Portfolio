@@ -14,7 +14,7 @@ export function About() {
       <br />
       <p>
         Outside of work I am a full time student and husband. I'm in the final semester of my BS CS at{" "}
-        <a href="weber.edu">Weber State University.</a>
+        <a href="https://www.weber.edu">Weber State University.</a>
       </p>
     </>
   );
