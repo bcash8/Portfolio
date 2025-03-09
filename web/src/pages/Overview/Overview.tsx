@@ -4,6 +4,7 @@ import styles from "./Overview.module.css";
 import { Interests } from "../../components/Overview/Interests";
 import { Projects } from "../../components/Overview/Projects";
 import { Contact } from "../../components/Overview/Contact";
+import { Now } from "../../components/Overview/Now";
 export function Overview() {
   return (
     <main className={styles.layout}>
@@ -22,7 +23,9 @@ export function Overview() {
       <div className={`${styles.panel} ${styles.interests}`}>
         <Interests />
       </div>
-      <div className={`${styles.panel} ${styles.now}`}>Now</div>
+      <div className={`${styles.panel} ${styles.now}`}>
+        <Now />
+      </div>
     </main>
   );
 }
