@@ -1,0 +1,55 @@
+.layout {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  margin: auto;
+}
+
+.layout ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem; /* Add spacing between image and content */
+  aspect-ratio: 1 / 1;
+  color: var(--text);
+}
+
+.project h2 {
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.imageContainer {
+  height: auto;
+  max-height: 70%;
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1023px) {
+  .layout ul {
+    grid-template-columns: 1fr;
+  }
+}

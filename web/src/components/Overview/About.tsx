@@ -2,7 +2,9 @@ export function About() {
   return (
     <>
       <h2>About Me</h2>
-      <p>I am a developer based in Utah. I work at Datafy as a fullstack engineer.</p>
+      <p>
+        I am a developer based in Utah. I work at <a href="https://www.datafy.com">Datafy</a> as a fullstack engineer.
+      </p>
       <br />
       <p>I generally work with the following tools:</p>
       <ul className="list-hyp">

@@ -8,22 +8,22 @@ import { Now } from "../../components/Overview/Now";
 export function Overview() {
   return (
     <main className={styles.layout}>
-      <div className={`${styles.panel} ${styles.welcome}`}>
+      <div className={`panel ${styles.welcome}`}>
         <Welcome />
       </div>
-      <div className={`${styles.panel} ${styles.about}`}>
+      <div className={`panel ${styles.about}`}>
         <About />
       </div>
-      <div className={`${styles.panel} ${styles.contact}`}>
+      <div className={`panel ${styles.contact}`}>
         <Contact />
       </div>
-      <div className={`${styles.panel} ${styles.projects}`}>
+      <div className={`panel ${styles.projects}`}>
         <Projects />
       </div>
-      <div className={`${styles.panel} ${styles.interests}`}>
+      <div className={`panel ${styles.interests}`}>
         <Interests />
       </div>
-      <div className={`${styles.panel} ${styles.now}`}>
+      <div className={`panel ${styles.now}`}>
         <Now />
       </div>
     </main>
